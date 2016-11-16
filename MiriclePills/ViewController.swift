@@ -13,9 +13,19 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var statePicker: UIPickerView!
     @IBOutlet weak var statePickerBtn: UIButton!
     @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var successMesg: UIImageView!
     @IBOutlet weak var zipCodeTextField: UITextField!
     @IBOutlet weak var zipCodeLabel: UILabel!
     @IBOutlet weak var countryTextField: UITextField!
+    @IBOutlet weak var buyNowBtn: UIButton!
+    @IBAction func buyNowBtnPressed(_ sender: Any) {
+        statePicker.isHidden = true
+        countryLabel.isHidden = true
+        countryTextField.isHidden = true
+        zipCodeLabel.isHidden = true
+        zipCodeTextField.isHidden = true
+        successMesg.isHidden = false
+    }
     
     let states = ["Utah", "Colorado", "Washington", "New York", "Idaho", "Oregon"]
     
